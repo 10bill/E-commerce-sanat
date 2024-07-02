@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2? family= Advent+Pro:wght@100 & family= Dancing+Script:wght@400;500;700 & family= Poppins:ital, wght@0,400;0,800;1,600 & display=swap');
+
+:root {
+    --blanche: #ffff;
+    --black: #333;
+    --primaire: #007bc4;
+    --bg-color: #eee;
+    --gri: #888;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --border: .1rem solid #999;
+    --light-color: #777;
+    --main-color: #2980b9;
+    --light-bg: #f5f5f5;
+
+}
+
+* {
+    font-family: 'dancing cursive', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+
+}
+
+*::selection {
+    color: white;
+    background-color: var(--main-color);
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+    height: .5rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--light-bg);
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.btn,
+.delete-btn,
+.option-btn {
+    display: block;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.8rem;
+    color: white;
+    padding: 1rem 3rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.btn {
+    background-color: var(--main-color);
+}
+
+.delete-btn {
+    background-color: red;
+}
+
+.option-btn {
+    background-color: orange;
+}
+
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover {
+    background-color: black;
+}
+
+.flex-btn {
+    display: flex;
+    gap: 1rem;
+}
+
+.message {
+    position: sticky;
+    top: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--light-bg);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.message span {
+    font-size: 2rem;
+    color: black;
+}
+
+.message i {
+    font-size: 2.5rem;
+    color: red;
+    cursor: pointer;
+}
+
+.message i:hover {
+    color: black;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: black;
+    font-size: 3.5rem;
+}
+
+.empty {
+    border: var(--border);
+    border-radius: .5rem;
+    background-color: white;
+    padding: 1.5rem;
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: red;
+    box-shadow: var(--box-shadow);
+
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+
+.form-container form {
+    background-color: white;
+    border-radius: .5rem;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    padding: 8rem;
+    text-align: center;
+    width: 60rem;
+    height: 500px;
+}
+
+.form-container form h3 {
+    font-size: 2.5rem;
+    color: black;
+    text-transform: uppercase;
+}
+
+.form-container form p {
+    margin: 2.5rem 0;
+    font-size: 2rem;
+    color: var(--light-color);
+}
+
+.form-container form p span {
+    color: orange;
+}
+
+.form-container form .box {
+    width: 100%;
+    background-color: var(--light-bg);
+    padding: 1.4rem;
+    font-size: 1.4rem;
+    color: black;
+    margin: 1rem 0;
+    border: var(--border);
+    font-size: 1.8rem;
+    border-radius: .5rem;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+}
+
+.header .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header .flex .logo {
+    font-size: 2.5rem;
+    color: black;
+}
+
+.header .flex .logo span {
+    color: var(--main-color);
+}
+
+.header .flex .navbar a {
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: var(--light-color);
+}
+
+.header .flex .navbar a:hover {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+.header .flex .icons>* {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--light-color);
+    margin-left: 1.7rem;
+}
+
+.header .flex .icons>*:hover {
+    color: var(--main-color);
+}
+
+.header .flex .profile {
+    position: absolute;
+    top: 125%;
+    right: 2rem;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    border-radius: .5rem;
+    padding: 2rem;
+    padding-top: 1rem;
+    display: none;
+    animation: fadeIn .2s linear;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(1rem);
+    }
+}
+
+.header .flex .profile p {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+}
+
+.header .flex .profile.active {
+    display: inline-block;
+}
+
+#menu-btn {
+    display: none;
+}
+
+.tableau .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.tableau .box-container .box {
+    text-align: center;
+    background-color: white;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.tableau .box-container .box h3 {
+    font-size: 2.7rem;
+    color: black;
+}
+
+.tableau .box-container .box h3 span {
+    font-size: 2rem;
+}
+
+.tableau .box-container .box p {
+    padding: 1.5rem;
+    border-radius: .5rem;
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    font-size: 1.8rem;
+    border: var(--border);
+    margin: 1rem 0;
+    color: var(--light-color);
+}
+
+.ajouter-produit form {
+    margin: 0 auto;
+    max-width: 80rem;
+    background-color: white;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    padding: 2rem;
+}
+
+.ajouter-produit form .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.ajouter-produit form .flex .inputBox {
+    flex: 1 1 30rem;
+}
+
+.ajouter-produit form .flex .inputBox .box {
+    background-color: var(--light-bg);
+    border: var(--border);
+    width: 100%;
+    padding: 1.4rem;
+    font-size: 1.8rem;
+    color: black;
+    border-radius: .5rem;
+    margin-top: 1rem;
+}
+
+.ajouter-produit form .flex .inputBox span {
+    font-size: 2rem;
+    color: var(--light-color);
+}
+
+.ajouter-produit form .flex .inputBox textarea {
+    height: 5.7rem;
+    resize: none;
+}
+
+.show-produits .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33rem);
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.show-produits .box-container .box {
+    background-color: white;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    padding: 2rem;
+}
+
+.show-produits .box-container .box img {
+    width: 100%;
+    height: 20rem;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.show-produits .box-container .box .name {
+    font-size: 2rem;
+    color: black;
+}
+
+.show-produits .box-container .box .prix {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin: .5rem 0;
+}
+
+.show-produits .box-container .box .details {
+    line-height: 2;
+    font-size: 1.6rem;
+    color: var(--light-color);
+}
+
+.modifier-produit form {
+    margin: 0 auto;
+    max-width: 50rem;
+    background-color: white;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    padding: 2rem;
+}
+
+.modifier-produit form .image-container .main-image img {
+    height: 20rem;
+    width: 100%;
+    object-fit: contain;
+}
+
+.modifier-produit form .image-container .sub-images {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    justify-content: center;
+}
+
+.modifier-produit form .image-container .sub-images img {
+    height: 10rem;
+    width: 10rem;
+    object-fit: contain;
+    border: var(--border);
+    cursor: pointer;
+    border-radius: .5rem;
+    transition: .2s linear;
+}
+
+.modifier-produit form .image-container .sub-images img:hover {
+    transform: scale(1.1);
+}
+
+.modifier-produit form .box {
+    background-color: var(--light-bg);
+    border: var(--border);
+    width: 100%;
+    padding: 1.4rem;
+    font-size: 1.8rem;
+    color: black;
+    border-radius: .5rem;
+    margin: 1rem 0;
+}
+
+.modifier-produit form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+.modifier-produit form span {
+    font-size: 1.7rem;
+    color: black;
+}
+
+.commande .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33rem);
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.commande .box-container .box {
+    background-color: white;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    padding: 2rem;
+    padding-top: 1rem;
+}
+
+.commande .box-container .box p {
+    padding: .3rem 0;
+    line-height: 2;
+    font-size: 1.8rem;
+    color: black;
+}
+
+.commande .box-container .box p span {
+    color: var(--main-color);
+}
+
+.commande .box-container .box .drop-down {
+    width: 100%;
+    margin: 1rem 0;
+    background-color: var(--light-bg);
+    padding: 1rem 1.4rem;
+    font-size: 2rem;
+    color: black;
+    border: var(--border);
+    border-radius: .5rem;
+}
+
+.compte .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33rem);
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.compte .box-container .box {
+    background-color: white;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    padding: 2rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.compte .box-container .box p {
+    padding: .3rem 0;
+    font-size: 1.8rem;
+    color: black;
+}
+
+.compte .box-container .box p span {
+    color: var(--main-color);
+}
+
+.messages .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33rem);
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.messages .box-container .box {
+    background-color: white;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    padding: 2rem;
+    padding-top: 1rem;
+}
+
+.messages .box-container .box p {
+    padding: .3rem 0;
+    font-size: 1.8rem;
+    color: black;
+}
+
+.messages .box-container .box p span {
+    color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:991px) {
+    html {
+        font-size: 55%;
+
+    }
+}
+
+@media(max-width:768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header .flex .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        border-top: var(--border);
+        border-bottom: var(--border);
+        background-color: white;
+        clip-path: polygon(0 0, 100% 0, 0 0);
+        transition: .2s linear;
+    }
+
+    .header .flex .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .flex .navbar a {
+        display: block;
+        margin: 2rem;
+    }
+
+}
+
+@media(max-width:450px) {
+    html {
+        font-size: 50%;
+
+    }
+
+    .flex-btn {
+        flex-flow: column;
+        gap: 0;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+
+    .show-produits .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .commande .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .compte .box-container {
+        grid-template-columns: 1fr;
+    }
+}
