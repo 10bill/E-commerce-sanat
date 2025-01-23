@@ -55,7 +55,7 @@ include 'wishlist_cart.php';
                 <div class="swiper-slide slide">
 
                     <div class="image">
-                        <img src="images/iphone.png" alt="">
+                        <img src="images/iphone16.png" alt="">
                     </div>
                     <div class="content">
                         <span> Obtenez 60% de réduction
