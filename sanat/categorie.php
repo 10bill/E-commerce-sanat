@@ -44,24 +44,25 @@ include 'wishlist_cart.php';
             if ($select_produit->rowCount() > 0) {
                 while ($fetch_produit = $select_produit->fetch(PDO::FETCH_ASSOC)) {
             ?>
-                    <form action="" method="post" class="box">
-                        <input type="hidden" name="pid" value="<?= $fetch_produit['id']; ?>">
-                        <input type="hidden" name="name" value="<?= $fetch_produit['name']; ?>">
-                        <input type="hidden" name="prix" value="<?= $fetch_produit['prix']; ?>">
-                        <input type="hidden" name="image" value="<?= $fetch_produit['image_01']; ?>">
+            <form action="" method="post" class="box">
+                <input type="hidden" name="pid" value="<?= $fetch_produit['id']; ?>">
+                <input type="hidden" name="name" value="<?= $fetch_produit['name']; ?>">
+                <input type="hidden" name="prix" value="<?= $fetch_produit['prix']; ?>">
+                <input type="hidden" name="image" value="<?= $fetch_produit['image_01']; ?>">
 
 
-                        <button type="submit" name="ajouter_à_la_liste" class="fas fa-heart"></button>
-                        <a href="vue_rapide.php?pid=<?= $fetch_produit['id']; ?>" class="fas fa-eye"></a>
-                        <img src="uploaded_img/<?= $fetch_produit['image_01']; ?> " class="image" alt="">
-                        <div class="name"><?= $fetch_produit['name']; ?></div>
-                        <div class="flex">
-                            <div class="prix">$<span><?= $fetch_produit['prix']; ?></span>/-
-                            </div>
-                            <input type="number" name="qte" class="qte" min="1" max="99" value="1" onkeypress="if(this.value.length ==2) return false;">
-                        </div>
-                        <input type="submit" value="ajouter au panier" name="ajouter_au_panier" class="btn">
-                    </form>
+                <button type="submit" name="ajouter_à_la_liste" class="fas fa-heart"></button>
+                <a href="vue_rapide.php?pid=<?= $fetch_produit['id']; ?>" class="fas fa-eye"></a>
+                <img src="uploaded_img/<?= $fetch_produit['image_01']; ?> " class="image" alt="">
+                <div class="name"><?= $fetch_produit['name']; ?></div>
+                <div class="flex">
+                    <div class="prix"><span><?= $fetch_produit['prix']; ?></span>€
+                    </div>
+                    <input type="number" name="qte" class="qte" min="1" max="99" value="1"
+                        onkeypress="if(this.value.length ==2) return false;">
+                </div>
+                <input type="submit" value="ajouter au panier" name="ajouter_au_panier" class="btn">
+            </form>
             <?php
                 }
             } else {

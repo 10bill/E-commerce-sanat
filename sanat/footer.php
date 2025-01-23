@@ -21,7 +21,7 @@
         <div class="box">
             <h3>Contacter nous</h3>
             <a href="Tel : +226 71544711"><i class="fas fa-phone"></i>+226 71544711</a>
-            <a href="Tel : +212 655925554"><i class="fas fa-phone"></i>+212 655925554</a>
+            <a href="Tel : +212 655925554"><i class="fas fa-phone"></i>+33 745587274</a>
             <a href="mail : sanat@gmail.com"><i class="fas fa-envelope"></i>sanat@gmail.com</a>
             <a href="https://www.google.com/"><i class="fas fa-map-marker-alt"></i>Avenue mohamed zerktouni</a>
 

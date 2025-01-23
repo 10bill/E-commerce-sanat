@@ -42,6 +42,19 @@ include 'wishlist_cart.php';
             <div class="swiper-wrapper">
                 <div class="swiper-slide slide">
                     <div class="image">
+                        <img src="images/iphone16.png" alt="">
+                    </div>
+                    <div class="content">
+                        <span> Obtenez 60% de réduction
+                            <br> sur tous vos achats en ligne</br> avec Sanat le meilleur service en ligne</br>
+                        </span>
+                        <h3>iphone 16 pro </h3>
+                        <a href="magasin.php" class="btn">ACHETEZ MAINTENANT</a>
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+
+                    <div class="image">
                         <img src="images/jbl3.png" alt="">
                     </div>
                     <div class="content">
@@ -54,18 +67,6 @@ include 'wishlist_cart.php';
                 </div>
                 <div class="swiper-slide slide">
 
-                    <div class="image">
-                        <img src="images/iphone16.png" alt="">
-                    </div>
-                    <div class="content">
-                        <span> Obtenez 60% de réduction
-                            <br> sur tous vos achats en ligne</br> avec Sanat le meilleur service en ligne</br>
-                        </span>
-                        <h3>iphone 14 pro max</h3>
-                        <a href="magasin.php" class="btn">ACHETEZ MAINTENANT</a>
-                    </div>
-                </div>
-                <div class="swiper-slide slide">
 
                     <div class="image">
                         <img src="images/appareil photo.png" alt="">
@@ -101,12 +102,12 @@ include 'wishlist_cart.php';
                     <img src="images/veste.jpg" alt="">
                     <h3>veste</h3>
                 </a>
-                <a href="categorie.php?categorie=crampons" class="swiper-slide slide">
+                <a href="categorie.php?categorie=sport" class="swiper-slide slide">
                     <img src="images/adidas.jpg" alt="">
                     <h3>crampons</h3>
                 </a>
-                <a href="categorie.php?categorie=iphone 13 pro max" class="swiper-slide slide">
-                    <img src="images/iphone 13 pro max.jpg" alt="">
+                <a href="categorie.php?categorie=iphone" class="swiper-slide slide">
+                    <img src="images/iphone16.png" alt="">
                     <h3>iphone </h3>
                 </a>
                 <a href="categorie.php?categorie=congélateur" class="swiper-slide slide">
